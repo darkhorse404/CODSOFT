@@ -1,5 +1,3 @@
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.*;
@@ -30,26 +28,3 @@ public class Student implements Serializable {
     }
 
 }
-
-// public void addS(String x, int y, int z) {
-// String pathname = Integer.toString(z) + Integer.toString(y);
-// File newfile = new File(pathname + ".txt");
-// try {
-// newfile.createNewFile();
-// FileWriter writer = new FileWriter(newfile);
-// try {
-// writer.write("Name:" + x + "\n" + "Roll Number:" + y + "\n" + "Grade:" + z +
-// "\n");
-// writer.close();
-// } catch (Exception e) {
-// System.out.println("Sorry File could not be written");
-// e.printStackTrace();
-// }
-// } catch (IOException e) {
-// System.out.println("Sorry File could not be created");
-// e.printStackTrace();
-// }
-// }
-// public static void main(String[] args) throws Exception {
-// System.out.println("Hello, World!");
-// }
