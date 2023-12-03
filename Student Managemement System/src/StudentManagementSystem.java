@@ -9,10 +9,12 @@ import java.util.*;
 //All packages imported
 
 public class StudentManagementSystem {
+
     // Declaring certain member data
     ArrayList<Student> aList = new ArrayList<Student>();
     ListIterator listi = null;
 
+    // Sub methods to be utilised in other methods for various purpose
     public boolean InputisnotEmpty(String x) { // Method to check if any input field is left empty
         if (x.equals("")) {
             return false;
@@ -23,8 +25,12 @@ public class StudentManagementSystem {
 
     public boolean isInteger(String x) { // Method to check if certain input fields are integers
         try {
-            Integer.parseInt(x);
-            return true;
+            int y = Integer.parseInt(x);
+            if (y < 0) {
+                return false;
+            } else {
+                return true;
+            }
         } catch (NumberFormatException e) {
             // TODO: handle exception
             return false;
@@ -68,17 +74,7 @@ public class StudentManagementSystem {
         return result;
     }
 
-    public boolean InputValidation(String a, String b, String c, String d, String e, String f, String g) { // To use
-                                                                                                           // certain
-                                                                                                           // methods
-                                                                                                           // and check
-                                                                                                           // if
-                                                                                                           // enterred
-                                                                                                           // input is
-                                                                                                           // valid or
-                                                                                                           // not and
-                                                                                                           // perform
-                                                                                                           // accordingly
+    public boolean InputValidation(String a, String b, String c, String d, String e, String f, String g) { // To use certain methods and check if enterred input is valid or not and perform accordingly
         String inputvalues[] = new String[] { a, b, c, d, e, f, g };
         boolean x = true, y = true;
         String printString = "";
@@ -124,6 +120,7 @@ public class StudentManagementSystem {
         return y;
     }
 
+    // Final Member Methods to be directly used in Main function
     public void ADDstudent() // To add a new student
     {
         Scanner sc = new Scanner(System.in);
@@ -156,13 +153,11 @@ public class StudentManagementSystem {
     }
 
     public Student SEARCHstudent(String searchname) { // Method to Search for a student
-        boolean recordfound = false;
         listi = aList.listIterator();
 
         while (listi.hasNext()) {
             Student searchstudent = (Student) listi.next();
             if (searchstudent.sname.equals(searchname)) {
-                recordfound = true;
                 System.out.println("Found Record:-");
                 System.out.println("Name:" + searchstudent.sname + "    Grade:" + searchstudent.grade
                         + "   Roll Number:" + searchstudent.rollnumber + "   Date of Birth(DD/MM/YYYY):"
@@ -171,9 +166,6 @@ public class StudentManagementSystem {
                 return searchstudent;
             }
         }
-        // if (recordfound == false) {
-
-        // }
         return null;
     }
 
@@ -252,6 +244,17 @@ public class StudentManagementSystem {
             }
         } while (quit2 == false);
 
+    }
+
+    public void DISPLAYALLstudents() { // Method to display all Students
+        listi = aList.listIterator();
+        while (listi.hasNext()) {
+            Student searchstudent = (Student) listi.next();
+            System.out.println("Name:" + searchstudent.sname + "    Grade:" + searchstudent.grade
+                    + "   Roll Number:" + searchstudent.rollnumber + "   Date of Birth(DD/MM/YYYY):"
+                    + searchstudent.dob + "    Age:" + searchstudent.age + "   Contact Number:"
+                    + searchstudent.contactno + "    Address:" + searchstudent.address);
+        }
     }
 
     // Main function
@@ -388,14 +391,7 @@ public class StudentManagementSystem {
 
                 case 4: // Case where user chooses to display all students
                     System.out.println("Displaying All Student records ...");
-                    obj.listi = obj.aList.listIterator();
-                    while (obj.listi.hasNext()) {
-                        Student searchstudent = (Student) obj.listi.next();
-                        System.out.println("Name:" + searchstudent.sname + "    Grade:" + searchstudent.grade
-                                + "   Roll Number:" + searchstudent.rollnumber + "   Date of Birth(DD/MM/YYYY):"
-                                + searchstudent.dob + "    Age:" + searchstudent.age + "   Contact Number:"
-                                + searchstudent.contactno + "    Address:" + searchstudent.address);
-                    }
+                    obj.DISPLAYALLstudents();
                     break;
 
                 case 5: // Case where user chooses to exit the system
