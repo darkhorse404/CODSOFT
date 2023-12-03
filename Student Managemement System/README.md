@@ -2,7 +2,7 @@
 
 Welcome to the Student Management System.
 
-The user may choose from the specified Main Menu of actions. He/She may ADD new Student records, VIEW, UPDATE, DELETE particular Student records, DISPLAY all Student records and/or finally EXIT the system. The program is set to be menu-driven. The usser has to iterate through the Main Menu and sub menus to operate. All the information and records enterred by the user is stored in a file named `StudentDatabase.txt` to ensure that data is not deleted while re-running the programme.
+The user may choose from the specified Main Menu of actions. He/She may ADD new Student records, VIEW, UPDATE, DELETE particular Student records, DISPLAY all Student records and/or finally EXIT the system. The program is set to be menu-driven. The user has to iterate through the Main Menu and sub menus to operate. All the information and records enterred by the user is stored in a file named `StudentDatabase.txt` to ensure that data is not deleted while re-running the programme.
 
 This has a console-based user interface.
 
