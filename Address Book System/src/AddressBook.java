@@ -93,17 +93,8 @@ public class AddressBook {
         return result;
     }
 
-    public boolean InputValidation(String a, String[] b, String c, String d, String e, String f) { // To use
-                                                                                                   // certain
-                                                                                                   // methods
-                                                                                                   // and check
-                                                                                                   // if
-                                                                                                   // enterred
-                                                                                                   // input is
-                                                                                                   // valid or
-                                                                                                   // not and
-                                                                                                   // perform
-                                                                                                   // accordingly
+    public boolean InputValidation(String a, String[] b, String c, String d, String e, String f) { 
+        // To use certain methods and check if enterred input is valid or not and perform accordingly
         String inputvalues[] = new String[] { a, c, d, e, f };
         boolean x = true, y = true, z = true;
         for (int i = 0; i < inputvalues.length; i++) {
@@ -245,6 +236,7 @@ public class AddressBook {
             if (newdob.equals("0")) {
                 newdob = searchcontact.dob;
             }
+            ac.nextLine();
             System.out.println("Enter new Address:");
             newaddress = ac.nextLine();
             if (newaddress.equals("0")) {
@@ -294,7 +286,7 @@ public class AddressBook {
         listi = aList.listIterator();
         while (listi.hasNext()) {
             Contact searchContact = (Contact) listi.next();
-            System.out.println("Name:" + searchContact.name + "\nPhone Number(s):");
+            System.out.println("\nName:" + searchContact.name + "\nPhone Number(s):");
             for (int i = 0; i < searchContact.phonenumber.length; i++) {
                 System.out.println("    " + searchContact.phonenumber[i]);
             }
