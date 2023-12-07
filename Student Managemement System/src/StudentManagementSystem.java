@@ -205,7 +205,6 @@ public class StudentManagementSystem {
             newcontactno = ac.next();
             if (newcontactno.equals("0")) {
                 newcontactno = Long.toString(searchstudent.contactno);
-                System.out.println(newcontactno);
             }
             System.out.print("Enter new Address:");
             newaddress = ac.next();
