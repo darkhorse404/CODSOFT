@@ -1,8 +1,10 @@
-# ADDRESS BOOK SYSTEM
+# TASK 5 - ADDRESS BOOK SYSTEM
 
 Welcome to the Address Book System.
 
-The user may choose from the specified Main Menu of actions. He/She may ADD new Contact records, VIEW, UPDATE, DELETE particular Contact records, DISPLAY all Contact records and/or finally EXIT the system. The program is set to be menu-driven. The user has to iterate through the Main Menu and sub menus to operate. All the information and records enterred by the user is stored in a file named `ContactDatabase.txt` to ensure that data is not deleted while re-running the programme.
+The user may choose from the specified Main Menu of actions. He/She may ADD new Contact records, VIEW, UPDATE, DELETE particular Contact records, DISPLAY all Contact records and/or finally EXIT the system. The program is set to be menu-driven. The user has to iterate through the Main Menu and sub menus to operate. 
+
+All the information and records enterred by the user is stored in a file named `ContactDatabase.txt` to ensure that data is not deleted while re-running the program. The data is stored in object type, so the text file is not directly readable by the user but the program itself reads the file, if the file exists, and extracts the data in appropriate format for future use. It also prompts the user incase it could not find the file in the specified destination path, or if it could not find particular records.
 
 This project has a console-based user interface.
 
