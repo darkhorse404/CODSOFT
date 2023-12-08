@@ -1,4 +1,4 @@
-# NUMBER GAME
+# TASK 1 - NUMBER GAME
 
 Welcome! 
 
